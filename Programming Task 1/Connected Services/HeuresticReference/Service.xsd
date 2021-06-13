@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfServiceLibrary" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfServiceLibrary" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:59849/Service.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ConfigData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Duration" type="xs:double" />
+      <xs:element minOccurs="0" name="NumberOfProcessors" type="xs:int" />
+      <xs:element minOccurs="0" name="NumberOfTasks" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="TimeMatrix" nillable="true" type="q1:ArrayOfdouble" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConfigData" nillable="true" type="tns:ConfigData" />
+  <xs:complexType name="AllocationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Energy" type="xs:double" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Map" nillable="true" type="q2:ArrayOfArrayOfint" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AllocationData" nillable="true" type="tns:AllocationData" />
+</xs:schema>
