@@ -217,17 +217,11 @@ namespace AllocationsApplication
             //List to save all the converted string of the allocations 
             List<string> allocationString = new List<string>();
 
-            //Saving all the maps returned
+            //Saving all the lowest energy maps returned
           
 
            
-            foreach (AllocationData d  in allAllocations)
-            {
-                
-            allocationString.AddRange(ConvertToString(d.Map, config.NumberOfTasks));
-                 
-            }
-
+          
             double old = 0;
             double energy = 0;
             foreach (AllocationData d in allAllocations)
@@ -329,6 +323,16 @@ namespace AllocationsApplication
 
             greedy.GreedyAlgCompleted += Greedy_GreedyAlgCompleted;
 
+            //ALBgreedy.GreedyServiceClient albGreedy = new ALBgreedy.GreedyServiceClient();
+
+            //ALBheurestic.HueresticServiceClient albHeurestic = new ALBheurestic.HueresticServiceClient();
+
+            //albGreedy.GreedyAlgCompleted += AlbGreedy_GreedyAlgCompleted;
+
+            //albHeurestic.HeuresticAlgCompleted += AlbHeurestic_HeuresticAlgCompleted;
+
+          
+
 
 
             lock (aLock)
@@ -342,13 +346,204 @@ namespace AllocationsApplication
 
             for (int i = 0; i < PT1Configuration.Program.Tasks; i++)
             {
-                greedy.GreedyAlgAsync(5000, config, i);
+                greedy.GreedyAlgAsync(50000, config, i);
 
-                heurestic.HeuresticAlgAsync(5000, config, i);
+                heurestic.HeuresticAlgAsync(50000, config, i);
+
+                //albGreedy.GreedyAlgAsync(50000, config, i);
+                //albHeurestic.HeuresticAlgAsync(50000, config, i);
+
 
             }
 
         }
+
+        //private void AlbHeurestic_HeuresticAlgCompleted(object sender, ALBheurestic.HeuresticAlgCompletedEventArgs e)
+        //{
+        //    try
+        //    {
+
+
+
+        //        AllocationData data = e.Result;
+
+
+        //        lock (aLock)
+        //        {
+        //            completedOperation++;
+
+        //            allAllocations.Add(data);
+
+        //            if (completedOperation == numberOfOperations)
+        //            {
+        //                autoReset.Set();
+        //            }
+
+        //        }
+        //    }
+        //    catch (Exception ex) when (ex.InnerException is TimeoutException tex)
+        //    {
+        //        //Handle local timeout
+        //        lock(aLock)
+        //        {
+        //            completedOperation++;
+
+        //            timedOutOperations++;
+
+
+        //            if (completedOperation == numberOfOperations)
+        //            {
+        //                autoReset.Set();
+        //            }
+        //        }
+               
+
+
+
+        //    }
+        //    catch (Exception ex) when (ex.InnerException is FaultException<HeuresticReference.TimeoutFault> fex)
+        //    {
+        //        //Handle remote timeout
+
+        //        lock(aLock)
+        //        {
+        //            completedOperation++;
+
+        //            timedOutOperations++;
+
+
+        //            if (completedOperation == numberOfOperations)
+        //            {
+        //                autoReset.Set();
+        //            }
+        //        }
+               
+        //    }
+        //    catch (Exception ex) when (ex.InnerException is CommunicationException cex)
+        //    {
+        //        lock (aLock)
+        //        {
+        //            completedOperation++;
+
+        //            timedOutOperations++;
+
+
+        //            if (completedOperation == numberOfOperations)
+        //            {
+        //                autoReset.Set();
+        //            }
+        //        }
+                   
+        //    }
+        //    catch (Exception ex) when (ex.InnerException is WebException wex)
+        //    {
+
+        //        lock (aLock)
+        //        {
+        //            completedOperation++;
+
+        //            timedOutOperations++;
+
+
+        //            if (completedOperation == numberOfOperations)
+        //            {
+        //                autoReset.Set();
+        //            }
+        //        }
+        //    }
+
+        //}
+
+        //private void AlbGreedy_GreedyAlgCompleted(object sender, ALBgreedy.GreedyAlgCompletedEventArgs e)
+        //{
+        //    try
+        //    {
+        //        AllocationData data = e.Result;
+
+        //        lock (aLock)
+        //        {
+        //            completedOperation++;
+
+        //            allAllocations.Add(data);
+
+        //            if (completedOperation == numberOfOperations)
+        //            {
+        //                autoReset.Set();
+        //            }
+
+        //        }
+        //    }
+        //    catch (Exception ex) when (ex.InnerException is TimeoutException tex)
+        //    {
+        //        //Handle local timeout
+        //        lock (aLock)
+        //        {
+        //            completedOperation++;
+
+        //            timedOutOperations++;
+
+
+        //            if (completedOperation == numberOfOperations)
+        //            {
+        //                autoReset.Set();
+        //            }
+        //        }
+
+
+
+
+        //    }
+        //    catch (Exception ex) when (ex.InnerException is FaultException<HeuresticReference.TimeoutFault> fex)
+        //    {
+        //        //Handle remote timeout
+
+        //        lock (aLock)
+        //        {
+        //            completedOperation++;
+
+        //            timedOutOperations++;
+
+
+        //            if (completedOperation == numberOfOperations)
+        //            {
+        //                autoReset.Set();
+        //            }
+        //        }
+
+        //    }
+        //    catch (Exception ex) when (ex.InnerException is CommunicationException cex)
+        //    {
+        //        lock (aLock)
+        //        {
+        //            completedOperation++;
+
+        //            timedOutOperations++;
+
+
+        //            if (completedOperation == numberOfOperations)
+        //            {
+        //                autoReset.Set();
+        //            }
+        //        }
+
+        //    }
+        //    catch (Exception ex) when (ex.InnerException is WebException wex)
+        //    {
+
+        //        lock (aLock)
+        //        {
+        //            completedOperation++;
+
+        //            timedOutOperations++;
+
+
+        //            if (completedOperation == numberOfOperations)
+        //            {
+        //                autoReset.Set();
+        //            }
+        //        }
+        //    }
+        //}
 
         private void Heurestic_HeuresticAlgCompleted(object sender, HeuresticReference.HeuresticAlgCompletedEventArgs e)
         {
@@ -375,33 +570,72 @@ namespace AllocationsApplication
             }
             catch (Exception ex) when (ex.InnerException is TimeoutException tex)
             {
-
-                completedOperation++;
-
-                timedOutOperations++;
-
-
-                if (completedOperation == numberOfOperations)
+                //Handle local timeout
+                lock (aLock)
                 {
-                    autoReset.Set();
+                    completedOperation++;
+
+                    timedOutOperations++;
+
+
+                    if (completedOperation == numberOfOperations)
+                    {
+                        autoReset.Set();
+                    }
                 }
 
 
 
+
             }
-            catch (Exception ex) when (ex.InnerException is FaultException fex)
+            catch (Exception ex) when (ex.InnerException is FaultException<HeuresticReference.TimeoutFault> fex)
             {
                 //Handle remote timeout
 
-
-                completedOperation++;
-
-                timedOutOperations++;
-
-
-                if (completedOperation == numberOfOperations)
+                lock (aLock)
                 {
-                    autoReset.Set();
+                    completedOperation++;
+
+                    timedOutOperations++;
+
+
+                    if (completedOperation == numberOfOperations)
+                    {
+                        autoReset.Set();
+                    }
+                }
+
+            }
+            catch (Exception ex) when (ex.InnerException is CommunicationException cex)
+            {
+                lock (aLock)
+                {
+                    completedOperation++;
+
+                    timedOutOperations++;
+
+
+                    if (completedOperation == numberOfOperations)
+                    {
+                        autoReset.Set();
+                    }
+                }
+
+            }
+            catch (Exception ex) when (ex.InnerException is WebException wex)
+            {
+
+                lock (aLock)
+                {
+                    completedOperation++;
+
+                    timedOutOperations++;
+
+
+                    if (completedOperation == numberOfOperations)
+                    {
+                        autoReset.Set();
+                    }
                 }
             }
         }
@@ -427,32 +661,72 @@ namespace AllocationsApplication
             }
             catch (Exception ex) when (ex.InnerException is TimeoutException tex)
             {
-
-                completedOperation++;
-
-                timedOutOperations++;
-
-
-                if (completedOperation == numberOfOperations)
+                //Handle local timeout
+                lock (aLock)
                 {
-                    autoReset.Set();
+                    completedOperation++;
+
+                    timedOutOperations++;
+
+
+                    if (completedOperation == numberOfOperations)
+                    {
+                        autoReset.Set();
+                    }
                 }
 
 
 
+
             }
-            catch (Exception ex) when (ex.InnerException is FaultException fex)
+            catch (Exception ex) when (ex.InnerException is FaultException<HeuresticReference.TimeoutFault> fex)
             {
-                
+                //Handle remote timeout
 
-                completedOperation++;
-
-                timedOutOperations++;
-
-
-                if (completedOperation == numberOfOperations)
+                lock (aLock)
                 {
-                    autoReset.Set();
+                    completedOperation++;
+
+                    timedOutOperations++;
+
+
+                    if (completedOperation == numberOfOperations)
+                    {
+                        autoReset.Set();
+                    }
+                }
+
+            }
+            catch (Exception ex) when (ex.InnerException is CommunicationException cex)
+            {
+                lock (aLock)
+                {
+                    completedOperation++;
+
+                    timedOutOperations++;
+
+
+                    if (completedOperation == numberOfOperations)
+                    {
+                        autoReset.Set();
+                    }
+                }
+
+            }
+            catch (Exception ex) when (ex.InnerException is WebException wex)
+            {
+
+                lock (aLock)
+                {
+                    completedOperation++;
+
+                    timedOutOperations++;
+
+
+                    if (completedOperation == numberOfOperations)
+                    {
+                        autoReset.Set();
+                    }
                 }
             }
         }

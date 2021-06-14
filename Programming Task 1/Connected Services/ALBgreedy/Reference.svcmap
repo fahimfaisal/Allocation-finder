@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f7e1c1a3-9349-4c14-a710-105d1641ba16" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://algloadbalancer-613691051.us-east-1.elb.amazonaws.com/GreedyService/GreedyService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="GreedyService.disco" MetadataType="Disco" ID="bd2d8b9c-998f-4879-b14b-90a916fbfd5b" SourceId="1" SourceUrl="http://algloadbalancer-613691051.us-east-1.elb.amazonaws.com/GreedyService/GreedyService.svc?disco" />
+    <MetadataFile FileName="GreedyService.xsd" MetadataType="Schema" ID="477ef5cc-a89f-4de0-99f8-d7fb7d8c24fe" SourceId="1" SourceUrl="http://algloadbalancer-613691051.us-east-1.elb.amazonaws.com/GreedyService/GreedyService.svc?xsd=xsd1" />
+    <MetadataFile FileName="GreedyService1.xsd" MetadataType="Schema" ID="13cc1b7c-e2d8-4667-a3b8-1309e028017c" SourceId="1" SourceUrl="http://algloadbalancer-613691051.us-east-1.elb.amazonaws.com/GreedyService/GreedyService.svc?xsd=xsd0" />
+    <MetadataFile FileName="GreedyService2.xsd" MetadataType="Schema" ID="9593a6f3-17d7-420f-bce1-83a3a2b1b0f5" SourceId="1" SourceUrl="http://algloadbalancer-613691051.us-east-1.elb.amazonaws.com/GreedyService/GreedyService.svc?xsd=xsd3" />
+    <MetadataFile FileName="GreedyService3.xsd" MetadataType="Schema" ID="1fe10d1a-4b04-488a-bc9c-408002955337" SourceId="1" SourceUrl="http://algloadbalancer-613691051.us-east-1.elb.amazonaws.com/GreedyService/GreedyService.svc?xsd=xsd2" />
+    <MetadataFile FileName="GreedyService4.xsd" MetadataType="Schema" ID="d026c50e-77a4-45f1-916e-f9c3ebbaddb3" SourceId="1" SourceUrl="http://algloadbalancer-613691051.us-east-1.elb.amazonaws.com/GreedyService/GreedyService.svc?xsd=xsd4" />
+    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="80ded85d-7c87-4742-a339-7eb92dbe7b9f" SourceId="1" SourceUrl="http://algloadbalancer-613691051.us-east-1.elb.amazonaws.com/GreedyService/GreedyService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

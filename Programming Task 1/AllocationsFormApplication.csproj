@@ -84,6 +84,16 @@
     <Compile Include="AllocationsViewer.Designer.cs">
       <DependentUpon>AllocationsViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\ALBgreedy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ALBheurestic\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\GreedyReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -132,38 +142,70 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Connected Services\ALBgreedy\GreedyService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ALBgreedy\GreedyService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ALBgreedy\GreedyService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ALBgreedy\GreedyService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ALBgreedy\GreedyService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ALBgreedy\Service.wsdl" />
+    <None Include="Connected Services\ALBheurestic\HeuresticService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ALBheurestic\HeuresticService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ALBheurestic\HeuresticService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ALBheurestic\HeuresticService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ALBheurestic\HeuresticService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ALBheurestic\Service.wsdl" />
+    <None Include="Connected Services\GreedyReference\GreedyService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GreedyReference\GreedyService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GreedyReference\GreedyService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GreedyReference\GreedyService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GreedyReference\GreedyService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\GreedyReference\Service.wsdl" />
-    <None Include="Connected Services\GreedyReference\Service.xsd">
+    <None Include="Connected Services\HeuresticReference\HeuresticService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\GreedyReference\Service1.xsd">
+    <None Include="Connected Services\HeuresticReference\HeuresticService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\GreedyReference\Service2.xsd">
+    <None Include="Connected Services\HeuresticReference\HeuresticService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\GreedyReference\Service3.xsd">
+    <None Include="Connected Services\HeuresticReference\HeuresticService3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\GreedyReference\Service4.xsd">
+    <None Include="Connected Services\HeuresticReference\HeuresticService4.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\HeuresticReference\Service.wsdl" />
-    <None Include="Connected Services\HeuresticReference\Service.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\HeuresticReference\Service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\HeuresticReference\Service2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\HeuresticReference\Service3.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\HeuresticReference\Service4.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Properties\DataSources\WcfServiceLibrary.AllocationData.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -200,11 +242,13 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ALBgreedy\" />
+    <WCFMetadataStorage Include="Connected Services\ALBheurestic\" />
     <WCFMetadataStorage Include="Connected Services\GreedyReference\" />
     <WCFMetadataStorage Include="Connected Services\HeuresticReference\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\GreedyReference\Service.disco" />
+    <None Include="Connected Services\GreedyReference\GreedyService.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\GreedyReference\configuration91.svcinfo" />
@@ -219,7 +263,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\HeuresticReference\Service.disco" />
+    <None Include="Connected Services\HeuresticReference\HeuresticService.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\HeuresticReference\configuration91.svcinfo" />
@@ -229,6 +273,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\HeuresticReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ALBgreedy\GreedyService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ALBgreedy\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ALBgreedy\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ALBgreedy\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ALBheurestic\HeuresticService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ALBheurestic\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ALBheurestic\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ALBheurestic\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

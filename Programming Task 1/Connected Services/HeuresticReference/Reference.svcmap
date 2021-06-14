@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="60abc236-1a57-498e-86bc-4a2d1347da0c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1d40fd0a-09fd-4369-8a83-c062a72f6607" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -18,16 +18,16 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:59849/Service.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:59849/HeuresticService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="c3e8d752-e1b1-436f-a3d8-45998a7b9b14" SourceId="1" SourceUrl="http://localhost:59849/Service.svc?wsdl" />
-    <MetadataFile FileName="Service.xsd" MetadataType="Schema" ID="20f4d504-1257-4681-b17c-eddbaa0b723f" SourceId="1" SourceUrl="http://localhost:59849/Service.svc?xsd=xsd2" />
-    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="4db8b9d2-8ee7-452e-b182-3ac7631f6558" SourceId="1" SourceUrl="http://localhost:59849/Service.svc?xsd=xsd3" />
-    <MetadataFile FileName="Service2.xsd" MetadataType="Schema" ID="eb3dbb3f-9402-48d9-a192-be82bb284646" SourceId="1" SourceUrl="http://localhost:59849/Service.svc?xsd=xsd0" />
-    <MetadataFile FileName="Service.disco" MetadataType="Disco" ID="7fa7d6d3-4d6e-40a1-9b53-a143341d44b5" SourceId="1" SourceUrl="http://localhost:59849/Service.svc?disco" />
-    <MetadataFile FileName="Service3.xsd" MetadataType="Schema" ID="8e82e436-a455-419a-b7d7-7a8576771220" SourceId="1" SourceUrl="http://localhost:59849/Service.svc?xsd=xsd4" />
-    <MetadataFile FileName="Service4.xsd" MetadataType="Schema" ID="3130ab83-00fa-4206-873b-22129fa06488" SourceId="1" SourceUrl="http://localhost:59849/Service.svc?xsd=xsd1" />
+    <MetadataFile FileName="HeuresticService.xsd" MetadataType="Schema" ID="4ceafd13-4e99-43aa-b7da-1bd59069b38e" SourceId="1" SourceUrl="http://localhost:59849/HeuresticService.svc?xsd=xsd1" />
+    <MetadataFile FileName="HeuresticService1.xsd" MetadataType="Schema" ID="ee4c0312-a375-4be0-a6b1-6dba68013e68" SourceId="1" SourceUrl="http://localhost:59849/HeuresticService.svc?xsd=xsd3" />
+    <MetadataFile FileName="HeuresticService2.xsd" MetadataType="Schema" ID="4ad84f55-323d-4f2b-9757-34679f65d267" SourceId="1" SourceUrl="http://localhost:59849/HeuresticService.svc?xsd=xsd4" />
+    <MetadataFile FileName="HeuresticService.disco" MetadataType="Disco" ID="45e57def-f316-4ab8-a24f-241b8c7d5472" SourceId="1" SourceUrl="http://localhost:59849/HeuresticService.svc?disco" />
+    <MetadataFile FileName="HeuresticService3.xsd" MetadataType="Schema" ID="ae570731-c757-4d24-bd71-ec570f1ed3a1" SourceId="1" SourceUrl="http://localhost:59849/HeuresticService.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="2bd72f9b-df21-4925-b304-094be1969b49" SourceId="1" SourceUrl="http://localhost:59849/HeuresticService.svc?wsdl" />
+    <MetadataFile FileName="HeuresticService4.xsd" MetadataType="Schema" ID="40dbec31-d192-42bd-83e0-9e38eb3e99ed" SourceId="1" SourceUrl="http://localhost:59849/HeuresticService.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

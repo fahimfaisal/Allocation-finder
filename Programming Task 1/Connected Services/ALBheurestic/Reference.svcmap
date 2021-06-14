@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e1d33378-b672-435f-a1ac-855ffdd7493f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://algloadbalancer-613691051.us-east-1.elb.amazonaws.com/HueresticService/HeuresticService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="6553e78f-44f8-4d99-946f-e7fc8f9ebc91" SourceId="1" SourceUrl="http://algloadbalancer-613691051.us-east-1.elb.amazonaws.com/HueresticService/HeuresticService.svc?wsdl" />
+    <MetadataFile FileName="HeuresticService.xsd" MetadataType="Schema" ID="506287b6-ee0f-48ee-9fad-e4cb95574417" SourceId="1" SourceUrl="http://algloadbalancer-613691051.us-east-1.elb.amazonaws.com/HueresticService/HeuresticService.svc?xsd=xsd3" />
+    <MetadataFile FileName="HeuresticService.disco" MetadataType="Disco" ID="530ee324-6fa4-4134-906a-ba3bf842c25c" SourceId="1" SourceUrl="http://algloadbalancer-613691051.us-east-1.elb.amazonaws.com/HueresticService/HeuresticService.svc?disco" />
+    <MetadataFile FileName="HeuresticService1.xsd" MetadataType="Schema" ID="d6432943-0647-4fb3-8a4e-f8f9c5ad56fc" SourceId="1" SourceUrl="http://algloadbalancer-613691051.us-east-1.elb.amazonaws.com/HueresticService/HeuresticService.svc?xsd=xsd4" />
+    <MetadataFile FileName="HeuresticService2.xsd" MetadataType="Schema" ID="ebcb8e3c-8362-4196-a15a-b156d987f27b" SourceId="1" SourceUrl="http://algloadbalancer-613691051.us-east-1.elb.amazonaws.com/HueresticService/HeuresticService.svc?xsd=xsd1" />
+    <MetadataFile FileName="HeuresticService3.xsd" MetadataType="Schema" ID="4614019f-325e-490a-88e0-fb3c97c86c4e" SourceId="1" SourceUrl="http://algloadbalancer-613691051.us-east-1.elb.amazonaws.com/HueresticService/HeuresticService.svc?xsd=xsd0" />
+    <MetadataFile FileName="HeuresticService4.xsd" MetadataType="Schema" ID="b4f497e5-d9e9-4d82-8353-9ecd381d2715" SourceId="1" SourceUrl="http://algloadbalancer-613691051.us-east-1.elb.amazonaws.com/HueresticService/HeuresticService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
